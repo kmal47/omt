@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Tutor Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8">
+    <ion-list id="cleanerDetails-list9" *ngFor = "let key of list">
+  <div class="spacer" style="width:300px;height:44px;" id="cleanerDetails-spacer5"></div>
+  <img src="{{key.photoURL}}" style="display:block;width:40%;height:;margin-left:auto;margin-right:auto;" />
+  
+    <ion-item-divider color="light" id="cleanerDetails-list-item-divider1">
+        <p text-center> {{key.displayName}}</p>
+    </ion-item-divider>
+    <ion-item id="cleanerDetails-list-item-container3">
+      <div id="cleanerDetails-markdown7" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+         Subject : {{key.subject}}
+        </p>
+      </div>
+      <div id="cleanerDetails-markdown8" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          Level: {{key.level}}
+        </p>
+      </div>
+      <div id="cleanerDetails-markdown9" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          Experience: {{key.exp}} Years
+        </p>
+      </div>
+    
+        <div id="cleanerDetails-markdown11" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;">
+                Qualification: {{key.qualification}}
+            </p>
+          </div>
+      <div id="cleanerDetails-markdown11" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          Contact Number: {{key.phone}}
+        </p>
+      </div>
+      <div id="cleanerDetails-markdown12" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+         Rate/hour: RM {{key.rate}}
+        </p>
+      </div>
+      <div id="cleanerDetails-markdown12" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+         State: RM {{key.state}}
+        </p>
+      </div>
+    </ion-item>
+    
+ 
+  
+  <button ion-button block round color="baru" (click)="call(key.phone)">Call Me</button>
+  <button ion-button block round color="baru" (click)="goreview(key.uid)">View Review</button>
+    </ion-list>
+
+</ion-content>
