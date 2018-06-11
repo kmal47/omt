@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-request-has-been-send',
-  templateUrl: 'request-has-been-send.html'
+  selector: 'page-contact',
+  templateUrl: 'contact.html'
 })
-export class RequestHasBeenSendPage {
+export class ContactPage {
 
   constructor(public navCtrl: NavController) {
+
   }
-  
+
 }
